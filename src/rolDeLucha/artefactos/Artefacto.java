@@ -3,8 +3,6 @@ import rolDeLucha.*;
 
 public abstract class Artefacto {
 	public abstract int unidadesDeLucha(Rolando persona);
-	public boolean soyEspejo() {
-		return false;
-	}
+	
 	
 }
