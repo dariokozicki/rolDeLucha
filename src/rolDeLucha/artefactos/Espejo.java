@@ -17,7 +17,7 @@ public class Espejo extends Artefacto{
 					).unidadesDeLucha(persona);
 		return 0;
 	}
-	public Espejo getEspejo() {
+	public Espejo get() {
 		return espejo;
 	}
 }
