@@ -1,6 +1,6 @@
 package rolDeLucha;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 //import java.util.stream.Collectors;
@@ -15,7 +15,7 @@ public class Rolando {
 	Hechizo hechizoPreferido;
 	int valorBaseLucha;
 	List<Artefacto> artefactos;
-	public Rolando(Hechizo hech,ArrayList<Artefacto> artefactos) {
+	public Rolando(Hechizo hech,List<Artefacto> artefactos) {
 		hechizoPreferido = hech;
 		valorBaseLucha = 1;
 		this.artefactos = artefactos;
@@ -43,6 +43,9 @@ public class Rolando {
 	public void removerArtefacto(Artefacto artefacto) {
 		artefactos.remove(artefacto);
 	}
+	public void removerTodosLosArtefactos() {
+		artefactos.removeAll(artefactos);
+	}
 	public void setValorBaseLucha(int valor) {
 		valorBaseLucha = valor;
 	}
@@ -66,4 +69,8 @@ public class Rolando {
 	public List<Artefacto> getArtefactos(){
 		return artefactos;
 	}
+	public boolean estaCargado() {
+		return artefactos.size()>=5;
+	}
+	
 }
