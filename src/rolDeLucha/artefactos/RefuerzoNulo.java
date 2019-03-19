@@ -1,7 +1,7 @@
 package rolDeLucha.artefactos;
 import rolDeLucha.*;
 
-public class RefuerzoNulo implements Refuerzo{u
+public class RefuerzoNulo implements Refuerzo{
 	private static final RefuerzoNulo refuerzo = new RefuerzoNulo();
 	private RefuerzoNulo(){}
 	
@@ -9,7 +9,7 @@ public class RefuerzoNulo implements Refuerzo{u
 		return 0;
 	}
 	
-	public RefuerzoNulo get() {
+	public static RefuerzoNulo get() {
 		return refuerzo;
 	}
 }
