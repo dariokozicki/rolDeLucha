@@ -9,4 +9,10 @@ public class CollarDivino extends Artefacto{
 	public int unidadesDeLucha(Rolando persona) {
 		return perlas;
 	}
+	public void setPerlas(int perlas) {
+		this.perlas = perlas;
+	}
+	public int getPerlas() {
+		return perlas;
+	}
 }

@@ -12,6 +12,9 @@ public class FuerzaOscura {
 	public void eclipse() {
 		valor*=2;
 	}
+	public void revertirEclipse() {
+		valor/=2;
+	}
 	public int valor() {
 		return valor;
 	}

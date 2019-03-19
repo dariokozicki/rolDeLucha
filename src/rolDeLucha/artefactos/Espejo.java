@@ -8,8 +8,7 @@ public class Espejo extends Artefacto{
 	private Espejo() {}
 	
 	public int unidadesDeLucha(Rolando persona) {
-		if (persona.elMejorArtefacto(persona.getArtefactos())!=null
-				|| (persona.getArtefactos().size()==1 && persona.getArtefactos().contains(this)))
+		if (persona.getArtefactos().size()>1)
 			return persona.elMejorArtefacto(
 					            persona.getArtefactos().stream()
 					            .filter(art->art!=this)

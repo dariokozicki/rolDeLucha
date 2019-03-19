@@ -21,7 +21,7 @@ public class Rolando {
 		this.artefactos = artefactos;
 	}
 	public int nivelDeHechiceria() {
-		return 3*hechizoPreferido.poder(this)+FuerzaOscura.get().valor();
+		return 3*hechizoPreferido.poder()+FuerzaOscura.get().valor();
 	}
 	public void setHechizoPreferido(Hechizo hech) {
 		hechizoPreferido = hech;
@@ -30,7 +30,7 @@ public class Rolando {
 		return hechizoPreferido;
 	}
 	public boolean seCreePoderoso() {
-		return hechizoPreferido.esPoderoso(this);
+		return hechizoPreferido.esPoderoso();
 	}
 	public int habilidadParaLaLucha() {
 		return valorBaseLucha + artefactos.stream()
@@ -55,13 +55,13 @@ public class Rolando {
 	public boolean esLuchaMayorQueHechiceria() {
 		return habilidadParaLaLucha()>nivelDeHechiceria();
 	}
-	public Artefacto elMejorArtefacto(List<Artefacto> artefactos) {
-		if (artefactos.size()==0) {
+	public Artefacto elMejorArtefacto(List<Artefacto> art) {
+		if (art.size()==0) {
 			return null;
 		}
 		return Collections.max(
-				artefactos
-				,Comparator.comparing(art->art.unidadesDeLucha(this)));
+				art
+				,Comparator.comparing(arts->arts.unidadesDeLucha(this)));
 	}
 	public boolean estaElArtefacto(Artefacto artefacto) {
 		return artefactos.contains(artefacto);

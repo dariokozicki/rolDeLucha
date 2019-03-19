@@ -35,18 +35,15 @@ class test1TP1 {
 		EspectroMalefico espectro = new EspectroMalefico();
 		ArrayList<Artefacto> artefactos = null;
 		Rolando rolando = new Rolando(espectro,artefactos);
-		HechizoBasico basico = new HechizoBasico();
-		rolando.setHechizoPreferido(basico);
+		rolando.setHechizoPreferido(HechizoBasico.get());
 		assertEquals(35,rolando.nivelDeHechiceria());
 	}
 	@Test
 	void habilidadParaLaLucha() {
 		EspectroMalefico espectro = new EspectroMalefico();
 		ArrayList<Artefacto> artefactos = new ArrayList<Artefacto>();
-		EspadaDelDestino espada = new EspadaDelDestino();
-		MascaraOscura mascara = new MascaraOscura();
-		artefactos.add(espada);
-		artefactos.add(mascara);
+		artefactos.add(EspadaDelDestino.get());
+		artefactos.add(MascaraOscura.get());
 		Rolando rolando = new Rolando(espectro,artefactos);
 		assertEquals(8,rolando.habilidadParaLaLucha());
 	}

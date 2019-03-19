@@ -1,16 +1,17 @@
 package rolDeLucha.hechizosSet;
 import java.util.ArrayList;
 
-import rolDeLucha.*;
+
 
 public class LibroDeHechizos extends Hechizo{
 	ArrayList<Hechizo> hechizos;
 	public LibroDeHechizos(ArrayList<Hechizo> hechizos) {
 		this.hechizos = hechizos;
 	}
-	public int poder(Rolando persona) {
+	public int poder() {
 		return hechizos.stream()
-					   .map(hech->hech.poder(persona))
+					   .filter(hech->hech.esPoderoso())
+					   .map(hech->hech.poder())
 					   .reduce(0,Integer::sum);
 	}
 	

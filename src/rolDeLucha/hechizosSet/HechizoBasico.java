@@ -1,9 +1,8 @@
 package rolDeLucha.hechizosSet;
-import rolDeLucha.*;
 
 public class HechizoBasico extends Hechizo{
 	private static final HechizoBasico hech = new HechizoBasico();
-	public int poder(Rolando persona) {
+	public int poder() {
 		return 10;
 	}
 	private HechizoBasico() {}
